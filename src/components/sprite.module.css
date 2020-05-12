@@ -1,0 +1,132 @@
+
+/* Spec
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . s . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . c c c c c c c c c c c . . . . . . . ." 
+                    ". . . . . . . . b b b b b b b b b b b . . . . . . . ." 
+                    ". . . . . . . . b b b b b b b b b b b . . . . . . . ." 
+                    ". . . . . . . . a a a a a a a a a a a . . . . . . . ." 
+                    ". . . . . . . . a a a a a a a a a a a . . . . . . . ." 
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . ."
+                    ". . . w w w . . . w w w . . . w w w . . . w w w . . ."
+                    ". . . w w w . . . w w w . . . w w w . . . w w w . . ."
+                    ". . . w w w . . . w w w . . . w w w . . . w w w . . ."
+                    ". . . . . . . . . . . . . p . . . . . . . . . . . . ."
+                    ". . . . . . . . . . . . . . . . . . . . . . . . . . .";
+*/
+:root {
+    --invader-scale: 1;
+    --invader-margin: 0px;
+    --invader-1-margin: 0;/*1em 0 1em 1.1em;*/
+    --invader-2-margin: 0% 0% 0% 0%;
+    --invader-3-margin: 0;/*1em 0 1em 1.1em;*/
+    --invader-one-color: rgba(199, 90, 157, 1);
+    --invader-two-color: rgba(49, 53, 126, 1);
+    --invader-three-color: rgba(157, 198, 96, 1);
+    --invader-height: 2em;
+    --invader-width: 2em;
+    --player-height: 2em;
+    --player-width: 2em;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.item {
+    background: grey;
+    display: flex;
+    justify-content: center;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(32, 2em);
+    grid-template-rows: repeat(21, 2em);
+    grid-gap: 0.2em 0.2em;
+    height: auto;
+    width: auto;
+    min-height: 600px;
+    min-width: 800px;
+}
+
+.alien {
+    /*box-shadow: 90px 60px 0 0 var(--invader-one-color), 100px 60px 0 0 var(--invader-one-color), 110px 60px 0 0 var(--invader-one-color), 70px 70px 0 0 var(--invader-one-color), 80px 70px 0 0 var(--invader-one-color), 90px 70px 0 0 var(--invader-one-color), 100px 70px 0 0 var(--invader-one-color), 110px 70px 0 0 var(--invader-one-color), 120px 70px 0 0 var(--invader-one-color), 130px 70px 0 0 var(--invader-one-color), 60px 80px 0 0 var(--invader-one-color), 70px 80px 0 0 var(--invader-one-color), 80px 80px 0 0 var(--invader-one-color), 90px 80px 0 0 var(--invader-one-color), 100px 80px 0 0 var(--invader-one-color), 110px 80px 0 0 var(--invader-one-color), 120px 80px 0 0 var(--invader-one-color), 130px 80px 0 0 var(--invader-one-color), 140px 80px 0 0 var(--invader-one-color), 60px 90px 0 0 var(--invader-one-color), 70px 90px 0 0 var(--invader-one-color), 100px 90px 0 0 var(--invader-one-color), 130px 90px 0 0 var(--invader-one-color), 140px 90px 0 0 var(--invader-one-color), 60px 100px 0 0 var(--invader-one-color), 70px 100px 0 0 var(--invader-one-color), 80px 100px 0 0 var(--invader-one-color), 90px 100px 0 0 var(--invader-one-color), 100px 100px 0 0 var(--invader-one-color), 110px 100px 0 0 var(--invader-one-color), 120px 100px 0 0 var(--invader-one-color), 130px 100px 0 0 var(--invader-one-color), 140px 100px 0 0 var(--invader-one-color), 80px 110px 0 0 var(--invader-one-color), 90px 110px 0 0 var(--invader-one-color), 100px 110px 0 0 var(--invader-one-color), 110px 110px 0 0 var(--invader-one-color), 120px 110px 0 0 var(--invader-one-color), 70px 120px 0 0 var(--invader-one-color), 80px 120px 0 0 var(--invader-one-color), 100px 120px 0 0 var(--invader-one-color), 120px 120px 0 0 var(--invader-one-color), 130px 120px 0 0 var(--invader-one-color), 60px 130px 0 0 var(--invader-one-color), 140px 130px 0 0 var(--invader-one-color);
+    */
+    height: var(--invader-height);
+    width: var(--invader-width);
+    transform: scale(var(--invader-scale));
+    margin: var(--invader-1-margin);
+    grid-area: a;
+}
+
+.row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(11, 46%);
+    height: 100%;
+    width: 100%;
+}
+
+.alien-shot {
+    box-shadow: 90px 50px 0 0 rgba(0, 69, 219, 1), 90px 60px 0 rgba(0, 69, 219, 1) 90px 70px 0 0 rgba(0, 69, 219, 1), 100px 70px 0 0 rgba(0, 69, 219, 1), 110px 70px 0 0 rgba(0, 69, 219, 1), 110px 80px 0 0 rgba(0, 69, 219, 1), 110px 90px 0 0 rgba(0, 69, 219, 1);
+    height: 10px;
+    width: 10px;
+}
+
+.alienTwo {
+    /*box-shadow: 90px 60px 0 0 var(--invader-two-color), 150px 60px 0 0 var(--invader-two-color), 70px 70px 0 0 var(--invader-two-color), 100px 70px 0 0 var(--invader-two-color), 140px 70px 0 0 var(--invader-two-color), 170px 70px 0 0 var(--invader-two-color), 70px 80px 0 0 var(--invader-two-color), 90px 80px 0 0 var(--invader-two-color), 100px 80px 0 0 var(--invader-two-color), 110px 80px 0 0 var(--invader-two-color), 120px 80px 0 0 var(--invader-two-color), 130px 80px 0 0 var(--invader-two-color), 140px 80px 0 0 var(--invader-two-color), 150px 80px 0 0 var(--invader-two-color), 170px 80px 0 0 var(--invader-two-color), 70px 90px 0 0 var(--invader-two-color), 80px 90px 0 0 var(--invader-two-color), 90px 90px 0 0 var(--invader-two-color), 110px 90px 0 0 var(--invader-two-color), 120px 90px 0 0 var(--invader-two-color), 130px 90px 0 0 var(--invader-two-color), 150px 90px 0 0 var(--invader-two-color), 160px 90px 0 0 var(--invader-two-color), 170px 90px 0 0 var(--invader-two-color), 70px 100px 0 0 var(--invader-two-color), 80px 100px 0 0 var(--invader-two-color), 90px 100px 0 0 var(--invader-two-color), 100px 100px 0 0 var(--invader-two-color), 110px 100px 0 0 var(--invader-two-color), 120px 100px 0 0 var(--invader-two-color), 130px 100px 0 0 var(--invader-two-color), 140px 100px 0 0 var(--invader-two-color), 150px 100px 0 0 var(--invader-two-color), 160px 100px 0 0 var(--invader-two-color), 170px 100px 0 0 var(--invader-two-color), 80px 110px 0 0 var(--invader-two-color), 90px 110px 0 0 var(--invader-two-color), 100px 110px 0 0 var(--invader-two-color), 110px 110px 0 0 var(--invader-two-color), 120px 110px 0 0 var(--invader-two-color), 130px 110px 0 0 var(--invader-two-color), 140px 110px 0 0 var(--invader-two-color), 150px 110px 0 0 var(--invader-two-color), 160px 110px 0 0 var(--invader-two-color), 90px 120px 0 0 var(--invader-two-color), 150px 120px 0 0 var(--invader-two-color), 80px 130px 0 0 var(--invader-two-color), 160px 130px 0 0 var(--invader-two-color);
+    */
+    height: var(--invader-height);
+    width: var(--invader-width);
+    transform: scale(var(--invader-scale));
+    margin: var(--invader-2-margin);
+    grid-area: b;
+}
+
+/*TODO: .alien-two-shot*/
+
+.alienThree {
+    /*box-shadow: 100px 60px 0 0 var(--invader-three-color), 110px 60px 0 0 var(--invader-three-color), 90px 70px 0 0 var(--invader-three-color), 100px 70px 0 0 var(--invader-three-color), 110px 70px 0 0 var(--invader-three-color), 120px 70px 0 0 var(--invader-three-color), 80px 80px 0 0 var(--invader-three-color), 90px 80px 0 0 var(--invader-three-color), 100px 80px 0 0 var(--invader-three-color), 110px 80px 0 0 var(--invader-three-color), 120px 80px 0 0 var(--invader-three-color), 130px 80px 0 0 var(--invader-three-color), 70px 90px 0 0 var(--invader-three-color), 80px 90px 0 0 var(--invader-three-color), 100px 90px 0 0 var(--invader-three-color), 110px 90px 0 0 var(--invader-three-color), 130px 90px 0 0 var(--invader-three-color), 140px 90px 0 0 var(--invader-three-color), 70px 100px 0 0 var(--invader-three-color), 80px 100px 0 0 var(--invader-three-color), 90px 100px 0 0 var(--invader-three-color), 100px 100px 0 0 var(--invader-three-color), 110px 100px 0 0 var(--invader-three-color), 120px 100px 0 0 var(--invader-three-color), 130px 100px 0 0 var(--invader-three-color), 140px 100px 0 0 var(--invader-three-color), 90px 110px 0 0 var(--invader-three-color), 120px 110px 0 0 var(--invader-three-color), 80px 120px 0 0 var(--invader-three-color), 100px 120px 0 0 var(--invader-three-color), 110px 120px 0 0 var(--invader-three-color), 130px 120px 0 0 var(--invader-three-color), 70px 130px 0 0 var(--invader-three-color), 90px 130px 0 0 var(--invader-three-color), 120px 130px 0 0 var(--invader-three-color), 140px 130px 0 0 var(--invader-three-color);
+    */
+    height: var(--invader-height);
+    width: var(--invader-width);
+    transform: scale(var(--invader-scale));
+    margin: var(--invader-3-margin);
+    fill: var(--invader-three-color);
+    grid-area: c;
+}
+
+.alien-three-shot {
+    box-shadow: 100px 50px 0 0 rgba(0, 0, 0, 1), 110px 50px 0 0 rgba(0, 0, 0, 1), 120px 50px 0 0 rgba(0, 0, 0, 1), 100px 60px 0 0 rgba(0, 0, 0, 1), 80px 70px 0 0 rgba(0, 0, 0, 1), 90px 70px 0 0 rgba(0, 0, 0, 1), 100px 70px 0 0 rgba(0, 0, 0, 1), 80px 80px 0 0 rgba(0, 0, 0, 1), 80px 90px 0 0 rgba(0, 0, 0, 1);
+    height: 10px;
+    width: 10px;
+}
+
+.ship {
+    box-shadow: 90px 60px 0 0 rgba(0, 0, 0, 1), 100px 60px 0 0 rgba(0, 0, 0, 1), 110px 60px 0 0 rgba(0, 0, 0, 1), 120px 60px 0 0 rgba(0, 0, 0, 1), 70px 70px 0 0 rgba(0, 0, 0, 1), 80px 70px 0 0 rgba(0, 0, 0, 1), 90px 70px 0 0 rgba(0, 0, 0, 1), 100px 70px 0 0 rgba(0, 0, 0, 1), 110px 70px 0 0 rgba(0, 0, 0, 1), 120px 70px 0 0 rgba(0, 0, 0, 1), 130px 70px 0 0 rgba(0, 0, 0, 1), 140px 70px 0 0 rgba(0, 0, 0, 1), 60px 80px 0 0 rgba(0, 0, 0, 1), 70px 80px 0 0 rgba(0, 0, 0, 1), 80px 80px 0 0 rgba(0, 0, 0, 1), 90px 80px 0 0 rgba(0, 0, 0, 1), 100px 80px 0 0 rgba(0, 0, 0, 1), 110px 80px 0 0 rgba(0, 0, 0, 1), 120px 80px 0 0 rgba(0, 0, 0, 1), 130px 80px 0 0 rgba(0, 0, 0, 1), 140px 80px 0 0 rgba(0, 0, 0, 1), 150px 80px 0 0 rgba(0, 0, 0, 1), 50px 90px 0 0 rgba(0, 0, 0, 1), 60px 90px 0 0 rgba(0, 0, 0, 1), 80px 90px 0 0 rgba(0, 0, 0, 1), 100px 90px 0 0 rgba(0, 0, 0, 1), 110px 90px 0 0 rgba(0, 0, 0, 1), 130px 90px 0 0 rgba(0, 0, 0, 1), 150px 90px 0 0 rgba(0, 0, 0, 1), 160px 90px 0 0 rgba(0, 0, 0, 1), 40px 100px 0 0 rgba(0, 0, 0, 1), 50px 100px 0 0 rgba(0, 0, 0, 1), 60px 100px 0 0 rgba(0, 0, 0, 1), 70px 100px 0 0 rgba(0, 0, 0, 1), 80px 100px 0 0 rgba(0, 0, 0, 1), 90px 100px 0 0 rgba(0, 0, 0, 1), 100px 100px 0 0 rgba(0, 0, 0, 1), 110px 100px 0 0 rgba(0, 0, 0, 1), 120px 100px 0 0 rgba(0, 0, 0, 1), 130px 100px 0 0 rgba(0, 0, 0, 1), 140px 100px 0 0 rgba(0, 0, 0, 1), 150px 100px 0 0 rgba(0, 0, 0, 1), 160px 100px 0 0 rgba(0, 0, 0, 1), 170px 100px 0 0 rgba(0, 0, 0, 1), 60px 110px 0 0 rgba(0, 0, 0, 1), 70px 110px 0 0 rgba(0, 0, 0, 1), 80px 110px 0 0 rgba(0, 0, 0, 1), 100px 110px 0 0 rgba(0, 0, 0, 1), 110px 110px 0 0 rgba(0, 0, 0, 1), 130px 110px 0 0 rgba(0, 0, 0, 1), 140px 110px 0 0 rgba(0, 0, 0, 1), 150px 110px 0 0 rgba(0, 0, 0, 1), 70px 120px 0 0 rgba(0, 0, 0, 1), 140px 120px 0 0 rgba(0, 0, 0, 1);
+    height: 10px;
+    width: 10px;
+}
+
+.player {
+    height: var(--player-height);
+    width: var(--player-width);
+}
+
+.player-shot {
+    box-shadow: 110px 60px 0 0 rgba(0, 0, 0, 1), 110px 70px 0 0 rgba(0, 0, 0, 1), 110px 80px 0 0 rgba(0, 0, 0, 1), 110px 90px 0 0 rgba(0, 0, 0, 1), 110px 100px 0 0 rgba(0, 0, 0, 1);
+    height: 10px;
+    width: 10px;
+}
