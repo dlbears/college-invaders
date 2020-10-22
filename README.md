@@ -1,4 +1,4 @@
-##[https://college-invaders.now.sh/](Live Demo) 
+## [Live Demo](https://college-invaders.now.sh/) 
 
 
 ## Available Scripts
